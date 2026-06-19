@@ -70,13 +70,13 @@ const Homepage = () => {
         </div>
       </section>
 
-      {/* ---- Features Section ---- */}
+{/* ---- Features Section ---- */}
       <section className="mt-16 pb-8">
         <div className="text-center mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-800">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white transition-colors duration-300">
             Kenapa Belajar di Sini?
           </h2>
-          <p className="mt-3 text-slate-500 max-w-xl mx-auto">
+          <p className="mt-3 text-slate-500 dark:text-slate-400 max-w-xl mx-auto transition-colors duration-300">
             Tiga pilar utama yang akan membantu kamu memahami hardware PC secara komprehensif
           </p>
         </div>
@@ -85,13 +85,13 @@ const Homepage = () => {
           {features.map(({ icon: Icon, title, description, color }, index) => (
             <div
               key={index}
-              className="group relative bg-white rounded-xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+              className="group relative bg-white dark:bg-slate-900/50 backdrop-blur rounded-xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm hover:shadow-md dark:hover:shadow-indigo-500/20 hover:border-indigo-300 dark:hover:border-indigo-500/50 transition-all duration-300 hover:-translate-y-1"
             >
               <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl ${color} mb-5 group-hover:scale-110 transition-transform duration-300`}>
                 <Icon className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-semibold text-slate-800 mb-2">{title}</h3>
-              <p className="text-slate-500 text-sm leading-relaxed">{description}</p>
+              <h3 className="text-lg font-semibold text-slate-800 dark:text-white mb-2 transition-colors duration-300">{title}</h3>
+              <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed transition-colors duration-300">{description}</p>
             </div>
           ))}
         </div>
