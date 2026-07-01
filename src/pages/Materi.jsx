@@ -1,6 +1,17 @@
-import { Link } from 'react-router-dom'
-import { ArrowRight, Cpu, Monitor, MemoryStick, CircuitBoard, HardDrive, Zap, Box } from 'lucide-react'
-import hardwareData from '../data/hardwareData'
+import { Link } from "react-router-dom";
+import {
+  ArrowRight,
+  Cpu,
+  Monitor,
+  MemoryStick,
+  CircuitBoard,
+  HardDrive,
+  Zap,
+  Box,
+  Keyboard,
+  Tv,
+} from "lucide-react";
+import hardwareData from "../data/hardwareData";
 
 const iconMap = {
   Cpu,
@@ -10,23 +21,28 @@ const iconMap = {
   HardDrive,
   Zap,
   Box,
-}
+  Keyboard,
+  Tv,
+};
 
 const Materi = () => {
   return (
     <div>
       {/* Header */}
       <div className="mb-10">
-        <h1 className="text-3xl font-bold text-slate-800 dark:text-white">Materi Pembelajaran</h1>
+        <h1 className="text-3xl font-bold text-slate-800 dark:text-white">
+          Materi Pembelajaran
+        </h1>
         <p className="mt-2 text-slate-500 dark:text-slate-400">
-          Pelajari setiap komponen hardware PC secara mendalam. Pilih komponen yang ingin kamu kuasai.
+          Pelajari setiap komponen hardware PC secara mendalam. Pilih komponen
+          yang ingin kamu kuasai.
         </p>
       </div>
 
       {/* Grid List Materi */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {hardwareData.map((item) => {
-          const IconComponent = iconMap[item.icon] || Box
+          const IconComponent = iconMap[item.icon] || Box;
 
           return (
             <div
@@ -39,7 +55,9 @@ const Materi = () => {
               </div>
 
               {/* Content */}
-              <h3 className="text-lg font-semibold text-slate-800 dark:text-white mb-2">{item.name}</h3>
+              <h3 className="text-lg font-semibold text-slate-800 dark:text-white mb-2">
+                {item.name}
+              </h3>
               <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed flex-grow">
                 {item.shortDescription}
               </p>
@@ -60,11 +78,11 @@ const Materi = () => {
                 </div>
               </div>
             </div>
-          )
+          );
         })}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Materi
+export default Materi;
