@@ -311,8 +311,8 @@ const Quiz = () => {
                   <Terminal className="w-5 h-5 flex-shrink-0 mt-0.5" />
                   <p className="text-sm leading-relaxed">
                     {selectedAnswer === currentQuestion.correctAnswer 
-                      ? '> VALIDASI SUKSES: Data cocok dengan server.' 
-                      : `> FATAL ERROR: Data tidak valid. Koreksi sistem: ${currentQuestion.correctAnswer}`}
+                      ? '✅ Jawaban Benar!.' 
+                      : `❌ Jawaban Salah. Jawaban yang benar: ${currentQuestion.correctAnswer}`}
                   </p>
                 </motion.div>
               )}
